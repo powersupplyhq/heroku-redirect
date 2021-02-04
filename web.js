@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 
-var newBaseURL = process.env.NEW_BASE_URL || 'https://links.iterable.com';
+var newBaseURL = process.env.NEW_BASE_URL || 'https://www.territoryfoods.com';
 var redirectStatus = parseInt(process.env.REDIRECT_STATUS || 301);
 var port = process.env.PORT || 5000;
 
