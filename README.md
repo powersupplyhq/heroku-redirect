@@ -8,4 +8,7 @@ The app shouldn't ever really be hit w/the nginx proxy that is setup via
 buildpack settings. See that config here:
 https://github.com/powersupplyhq/iterable-links-redirector-proxy
 
-If by some happenstance it does get hit, then web.js will be executed
+If by some happenstance it does get hit, then web.js will be executed.
+
+## Credit
+kenmickles/heroku-redirect
