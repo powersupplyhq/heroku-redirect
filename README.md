@@ -1,32 +1,11 @@
-This has come in handy more times than it should have.
+## Y THO
+We want all traffic to https://links.territoryfoods.com to be proxied to
+https://links.iterable.com.
 
-## Configuration
+We could do some cloudfront stuff, or, we could do this. We did this.
 
-To redirect all requests to example.com:
+The app shouldn't ever really be hit w/the nginx proxy that is setup via
+buildpack settings. See that config here:
+https://github.com/powersupplyhq/iterable-links-redirector-proxy
 
-```
-heroku config:add NEW_BASE_URL=http://example.com
-```
-
-To use an alternative HTTP status code set `REDIRECT_STATUS`. Defaults to 302.
-```
-heroku config:add REDIRECT_STATUS=301
-```
-
-## Deployment
-
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-If the old app that you're redirecting from isn't a Node app you'll need to change the [buildpack](https://devcenter.heroku.com/articles/buildpacks):
-
-```
-heroku buildpacks:set heroku/nodejs
-```
-
-You can then replace the app by pushing with `-f`:
-
-```
-git push heroku master -f
-```
-
-**NOTE:** If the above doesn't work you may need to delete and re-create your Heroku app before pushing an entirely new Git repository into it.
+If by some happenstance it does get hit, then web.js will be executed

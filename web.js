@@ -1,8 +1,8 @@
 var express = require('express');
 var app = express();
 
-var newBaseURL = process.env.NEW_BASE_URL || 'http://example.com';
-var redirectStatus = parseInt(process.env.REDIRECT_STATUS || 302);
+var newBaseURL = process.env.NEW_BASE_URL || 'https://links.iterable.com';
+var redirectStatus = parseInt(process.env.REDIRECT_STATUS || 301);
 var port = process.env.PORT || 5000;
 
 app.get('*', function(request, response) {

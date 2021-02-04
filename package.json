@@ -1,7 +1,7 @@
 {
-  "name": "heroku-redirect",
+  "name": "iterable-links-redirector",
   "version": "1.0.0",
-  "description": "Super simple Node app that redirects all requests for an old Heroku app to a new URL",
+  "description": "Exists just for the sake of the procfile really.",
   "main": "web.js",
   "dependencies": {
     "express": "^4.15.3"
